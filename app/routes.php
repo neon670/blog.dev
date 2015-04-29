@@ -11,10 +11,10 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+// Route::get('/', function()
+// {
+// 	return View::make('hello');
+// });
 
 // Route::get('sayhello/{name}',function($name)
 // {
@@ -35,15 +35,18 @@ Route::get('/sayhello/{name}', function($name)
     }
 });
 
-Route::get('resume' ,function()
-{
-	return "this is my resume";
-});
 
-Route::get('portfolio' ,function()
-{
-	return "this is my portfolio";
-});
+Route::get('resume' ,'HomeController@showResume');
+
+Route::get('portfolio', 'HomeController@showPortfolio');
+
+Route::get('/' ,'HomeController@showWelcome');
+
+// Route::controller('about', 'AboutController');
+Route::resource('post', 'PostsController');
+
+
+
 
 Route::get('rolldice/{guess}',function($guess)
 {
@@ -54,4 +57,6 @@ Route::get('rolldice/{guess}',function($guess)
 		];
 	return View::make('roll-dice')->with($data);
 });
+
+
 
