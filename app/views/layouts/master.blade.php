@@ -24,9 +24,9 @@
 @include('partials.navbar')
 <body>
 	
-    @yield('content')
+    
 
-     <!-- Footer -->
+   {{--   <!-- Footer -->
     <footer>
         <div class="container text-center">
             <p>Copyright &copy; Noe Nevarez</p>
@@ -42,13 +42,13 @@
     <!-- Plugin JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
 
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="js/grayscale.js"></script>
 </body>
-</html>
+</html> --}}
 
 {{-- 
 <!DOCTYPE html> --}}
@@ -125,28 +125,15 @@
 
     <!-- Intro Header -->
       {{-- @yield('header') --}}
-    <header class="intro">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">Noe Nevarez</h1>
-                        <p class="intro-text">\brief descp</p>
-                        <a href="#about" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+   @yield('header')
 
     <!-- About Section -->
     <section id="about" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2>About Noe Nevarez</h2>
+               @yield('about')
                @yield('body')
+               @yield('content')
             </div>
         </div>
     </section>
@@ -175,27 +162,8 @@
     <!-- Map Section -->
     <div id="map"></div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container text-center">
-            <p>Copyright &copy; Noe Nevarez</p>
-        </div>
-    </footer>
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/grayscale.js"></script>
+  @include('partials.footer')
+   
     {{-- @yield('bottom-script') --}}
 </body> --}}
 

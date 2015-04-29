@@ -42,10 +42,24 @@ Route::get('portfolio', 'HomeController@showPortfolio');
 
 Route::get('/' ,'HomeController@showWelcome');
 
-// Route::controller('about', 'AboutController');
+Route::controller('about', 'AboutController');
 Route::resource('post', 'PostsController');
 
+Route::get('orm-test', function ()
+{
+    // $post= new Post();
+    // $post->title = 'New blog';
+    // $post->body = 'lorem ipsum';
+    // $post->save();
 
+    // $post = Post::all();
+    // return $post;
+
+    $post = Post::find(1);
+    $post->title = "New Title Goes Here.";
+    $post->save();
+    return $post;
+});
 
 
 Route::get('rolldice/{guess}',function($guess)

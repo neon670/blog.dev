@@ -1,6 +1,6 @@
 <?php
 
-class PostsController extends \BaseController {
+class AboutController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -9,7 +9,7 @@ class PostsController extends \BaseController {
 	 */
 	public function index()
 	{
-		return View::make('post.index');
+		//
 	}
 
 
@@ -20,7 +20,7 @@ class PostsController extends \BaseController {
 	 */
 	public function create()
 	{
-		return View::make('post.create');
+		//
 	}
 
 
@@ -31,7 +31,7 @@ class PostsController extends \BaseController {
 	 */
 	public function store()
 	{
-		$inputs = Input::all();
+		//
 	}
 
 
@@ -43,7 +43,7 @@ class PostsController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		return View::make('post.show');
+		//
 	}
 
 
@@ -55,7 +55,7 @@ class PostsController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		return "Edit post $id";
+		//
 	}
 
 
@@ -67,7 +67,7 @@ class PostsController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		return "Update post with $id";
+		//
 	}
 
 
@@ -79,7 +79,7 @@ class PostsController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		return "deleted post $id";
+		//
 	}
 
 
