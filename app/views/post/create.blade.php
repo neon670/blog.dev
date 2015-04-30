@@ -10,49 +10,32 @@
 		<input type="text" name="title">
 		<button type="submit" value="btn btn-default">Submit</button>
 	</form> --}}
+		<h1>Create a Post</h1>
+			@if($errors->all())
+				@foreach($errors->all() as $error)
+					{{ $error }}
+				@endforeach
+			@endif
+		{{-- {{ $errors->first('title', '<span class="help-block">:message</span>') }} --}}
 		<section class="container-fluid" id="section2">
-	  
-	    <div class="container">
+
+	  	<div class="container">
 	    <div class="row">
 	        <div class="col-md-12">
 	            <!-- <div class="well well-sm"> -->
+	            {{ Form::open($post, array('action' => array('PostsController@update', $post->id), 'method' => 'PUT')) }}
 	                <form class="form-horizontal" method="post" action="{{{ action('PostsController@store') }}}">
 	                    <fieldset>
 
 	                        <div class="form-group">
-	                            <span class="text-center"><i class="fa fa-user bigicon"></i></span>
 	                            <div class="col-md-8">
-	                                <input id="fname" name="first_name" type="text" value="{{{ Input::old('fname') }}}"placeholder="First Name" class="form-control">
-
-	                            </div>
-	                        </div>
-	                        <div class="form-group">
-	                            <span class="text-center"><i class="fa fa-user bigicon"></i></span>
-	                            <div class="col-md-8">
-	                                <input id="lname" name="last_name" type="text" placeholder="Last Name" class="form-control">
+	                                <input id="title" name="title" type="text" value="{{{ Input::old('title') }}}" placeholder="Title" class="form-control">
 	                            </div>
 	                        </div>
 
 	                        <div class="form-group">
-	                            <span class=" text-center"><i class="fa fa-envelope-o bigicon"></i></span>
-	                            <div class="col-md-8">
-	                                <input id="email" name="email" type="email" placeholder="Email Address" class="form-control">
-	                            </div>
-	                        </div>
-
-	                        <div class="form-group">
-	                            <span class="text-center"><i class="fa fa-users bigicon"></i></span>
-	                            <div class="col-md-8">
-	                                <input id="title" name="title" type="text" placeholder="Title" class="form-control">
-	                            </div>
-	                        </div>
-
-	                        <div class="form-group">
-	                            <span class="text-center"><i class="fa fa-unlock-alt bigicon"></i></span>
-	                            <div class="col-md-8">
-									<p>Password must contain at least six or more characters, one number and one uppercase character.</p>
-
-	                                <input id="pass" name="password" type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{6,}" placeholder="Type Password" class="form-control" onchange="form.passwordCheck.pattern = this.value;" required="required">
+	                        	<div class="col-md-8">	
+	                                <input id="body" name="body" type="text" value="{{{ Input::old('body') }}}" placeholder="Enter content" class="form-control">
 	                            </div>
 	                        </div>
 
@@ -63,6 +46,8 @@
 	                        </div>
 	                    </fieldset>
 	                </form>
+	                {{ Form::token() }}
+	                {{ Form::close() }}
 	            <!-- </div> -->
 	        </div>
 	    </div>

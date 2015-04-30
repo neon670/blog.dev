@@ -3,6 +3,9 @@
 {{-- @section('content')
    this is my resume 
 @stop --}}
+@section('title')
+    My Resume
+@stop
 
 @section('header')
  <header class="intro">

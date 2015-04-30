@@ -61,9 +61,12 @@
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
                     <li>
                         <a class="page-scroll" href="{{{ action('HomeController@showPortfolio') }}}">Portfolio</a>
                     </li>
+                    <li>
+                        <a class="page-scroll" href="http://blog.dev/post">Blog Post</a>
                     </li>
                 </ul>
             </div>

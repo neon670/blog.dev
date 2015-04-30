@@ -1,5 +1,8 @@
 @extends('layouts.master')
 
+@section('title')
+    My Portfolio
+@stop
 
 @section('content')
   This is a summary of some of my work I have completed while attending Code Up
