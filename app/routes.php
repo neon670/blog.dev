@@ -62,6 +62,16 @@ Route::get('orm-test', function ()
 });
 
 
+Route::get('test404',function(){
+
+    Log::info('This is some useful information.');
+    Log::warning('Something could be going wrong.');
+    Log::error('Something is really going wrong.');
+    App::abort('404');
+
+});
+
+
 Route::get('rolldice/{guess}',function($guess)
 {
 	$random = rand(1,6);

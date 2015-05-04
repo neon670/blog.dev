@@ -11,11 +11,11 @@
 		<button type="submit" value="btn btn-default">Submit</button>
 	</form> --}}
 		<h1>Create a Post</h1>
-			@if($errors->all())
-				@foreach($errors->all() as $error)
-					{{ $error }}
-				@endforeach
-			@endif
+			{{-- @if($errors->all()) --}}
+				{{-- @foreach($errors->all() as $error) --}}
+					{{-- {{ $error }} --}}
+				{{-- @endforeach --}}
+			{{-- @endif --}}
 		{{-- {{ $errors->first('title', '<span class="help-block">:message</span>') }} --}}
 		<section class="container-fluid" id="section2">
 
@@ -23,7 +23,7 @@
 	    <div class="row">
 	        <div class="col-md-12">
 	            <!-- <div class="well well-sm"> -->
-	            {{ Form::open($post, array('action' => array('PostsController@update', $post->id), 'method' => 'PUT')) }}
+	            {{-- {{ Form::open($post, array('action' => array('PostsController@update', $post->id), 'method' => 'PUT')) }} --}}
 	                <form class="form-horizontal" method="post" action="{{{ action('PostsController@store') }}}">
 	                    <fieldset>
 
@@ -46,8 +46,7 @@
 	                        </div>
 	                    </fieldset>
 	                </form>
-	                {{ Form::token() }}
-	                {{ Form::close() }}
+	                {{-- {{ Form::close() }} --}}
 	            <!-- </div> -->
 	        </div>
 	    </div>

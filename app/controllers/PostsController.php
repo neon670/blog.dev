@@ -58,11 +58,10 @@ class PostsController extends \BaseController {
         return Redirect::back()->withInput()->withErrors($validator);
     } else {
         $post = new Post;
-		// $post->first_name = Input::get('first_name');
-		// $post->last_name =  Input::get('last_name');
-		// $post->email =  Input::get('email');
 		$post->title =  Input::get('title');
 		$post->body =  Input::get('body');
+		$post->slug = Input::get('title');
+		$post->user_id = 1;
 		$post->save();
 		return Redirect::to('/post');
     }
@@ -78,12 +77,27 @@ class PostsController extends \BaseController {
 	public function show($id)
 	{
 		// return "show post id: $id";
-		$post = Post::find($id);
-		$data = array(
-			'post' => $post
+		try {
+
+			if(is_numeric($id)) {
+				$post = Post::findOrFail($id);
+			}else{
+				$slug = $id;
+				$post = Post::where('slug', '=', $slug)->firstOrFail();
+		}
+		// dd($post);
+			$data = array(
+				'post' => $post
 			);
+
 		return View::make('post.show')->with($data);
+
+	}   catch(Exception $e){
+		Log::error($e);
+		App::abort(404);
 	}
+	
+}
 
 
 	/**
@@ -94,7 +108,8 @@ class PostsController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		return "Edit post $id";
+
+		return View::make("edit");
 	}
 
 
