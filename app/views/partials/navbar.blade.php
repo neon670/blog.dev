@@ -29,7 +29,7 @@
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
                      <li>
-                        <a class="page-scroll" href="http://blog.dev/post">Blog Post</a>
+                        <a class="page-scroll" href="{{{ action('PostsController@index')     }}}">Blog Post</a>
                     </li>
                     @if(Auth::check())
                     <li>Hello, {{{ Auth::user()->username }}}</li>
