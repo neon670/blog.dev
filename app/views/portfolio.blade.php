@@ -15,7 +15,7 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <h1 class="brand-heading">Noe Nevarez</h1>
-                        <p class="intro-text">My portfolio</p>
+                        <p class="intro-text"><a href="#">My Portfolio</a> </p>
                         <a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
                         </a>
@@ -27,5 +27,5 @@
 @stop
 
 @section('about')
- <h2>About Noe Nevarez</h2>
+ <h2>My work</h2>
 @stop

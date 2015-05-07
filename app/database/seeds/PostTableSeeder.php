@@ -18,7 +18,7 @@ class PostTableSeeder extends Seeder{
 			$post = new Post();
 				$post->title = $faker->catchPhrase;
 				$post->body = $faker->paragraph($nbSentences = 3);
-				$post->slug = $faker->slug;
+				$post->slug = $faker->unique()->slug;
 				$post->user_id = $user->id;
 				$post->save();
 

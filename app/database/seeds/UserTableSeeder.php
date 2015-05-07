@@ -18,8 +18,8 @@ class UserTableSeeder extends Seeder{
 		{
 
 			$user = new User();
-				$user->username = $faker->userName;
-				$user->email=  $faker->email;
+				$user->username = $faker->unique()->userName;
+				$user->email=  $faker->unique()->email;
 				$user->password = $faker->password;
 				$user->save();
 
