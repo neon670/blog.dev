@@ -15,6 +15,12 @@ class HomeController extends BaseController {
 	|
 	*/
 
+	// public function __construct()
+	// {
+
+	// 	$this->beforeFilter('auth', ['except'=> ['index','show']]);
+	// }
+
 	public function showWelcome()
 	{
 		return View::make('hello');
@@ -30,9 +36,6 @@ class HomeController extends BaseController {
 		return View::make('portfolio');
 	}
 
-	
-
-	
 
 
 }

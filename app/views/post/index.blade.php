@@ -10,6 +10,7 @@
         @endforeach
         
  </ul>
- 	{{ $posts->links() }}
+ 	<div id = "page" > {{ $posts->links() }}
+ 	</div>
  <h4><a href="{{{'post/create'}}}">Create new blog</h4>
 @stop

@@ -2,24 +2,21 @@
 
 class PostsController extends \BaseController {
 
+
+	public function __construct()
+	{
+		$this->beforeFilter('auth', ['except' => ['index', 'show']]);
+		parent::__construct();
+	}
 	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
-	// public function index()
-	// {
-	// 	// return 'Output list of all posts';
-	// 	$posts = Post::all();
-	// 	$data = array(
-	// 		'posts' => $posts
-	// 		);
-	// 	return View::make('post.index')->with($data);
-	// }
 
 	public function index()
 	{
-		$posts = Post::paginate(4);
+		$posts = Post::paginate(10);
 		$data = array(
 			'posts' => $posts
 			);
@@ -61,7 +58,7 @@ class PostsController extends \BaseController {
 		$post->title =  Input::get('title');
 		$post->body =  Input::get('body');
 		$post->slug = Input::get('title');
-		$post->user_id = 1;
+		$post->user_id = Auth::id();
 		$post->save();
 		return Redirect::to('/post');
     }

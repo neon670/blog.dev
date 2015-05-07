@@ -25,4 +25,6 @@ class Post extends BaseModel
 	{
 	    return $this->belongsTo('User');
 	}
+
+	// public function postswithAuthor
 }

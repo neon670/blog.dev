@@ -45,20 +45,34 @@ Route::get('/' ,'HomeController@showWelcome');
 Route::controller('about', 'AboutController');
 Route::resource('post', 'PostsController');
 
+// =============================================
+/**
+*
+*   login routes
+*/
+Route::get('login', 'LoginController@login');
+Route::post('login', 'LoginController@doLogin');
+Route::get('logout', 'LoginController@logout');
+
+
+
 Route::get('orm-test', function ()
 {
-    // $post= new Post();
-    // $post->title = 'New blog';
-    // $post->body = 'lorem ipsum';
-    // $post->save();
+    $query = Post::with('user');
 
-    // $post = Post::all();
-    // return $post;
+    $search = 'noe';
 
-    $post = Post::find(1);
-    $post->title = "New Title Goes Here.";
-    $post->save();
-    return $post;
+    $query->where('title', 'like', '%' . $search . '%');
+    $query->orWhere('body', 'like', '%' . $search . '%' )->get();
+    
+    $query->orWhereHas('user', function($q){
+
+        $q->where('username', 'like', '%noe%');
+
+    });
+
+    $post = $query->orderBy('created_at', 'DESC')->paginate(10);
+    dd($post);
 });
 
 

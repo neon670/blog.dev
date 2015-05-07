@@ -16,6 +16,8 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 	 */
 	protected $table = 'users';
 
+
+
 	/**
 	* setting string lowercase
 	* mutator

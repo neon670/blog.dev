@@ -31,8 +31,19 @@
                      <li>
                         <a class="page-scroll" href="http://blog.dev/post">Blog Post</a>
                     </li>
+                    @if(Auth::check())
+                    <li>Hello, {{{ Auth::user()->username }}}</li>
+                    <li>
+                         <a class="page-scroll" href="{{{ action('LoginController@logout')    }}}">Logout</a>
+                    </li>
+                    @else
+                    <li>
+                        <a class="page-scroll" href="{{{ action('LoginController@login')    }}}">Login</a>
+                    </li>
+                    @endif
                 </ul>
             </div>
+                <form id="searchThis" action="/search" style="display: inline;" method="get"><input type="text" id="searchBox" /> <input id="searchButton" value="Go" type="submit" /></form>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->

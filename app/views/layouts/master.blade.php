@@ -26,7 +26,13 @@
     <!-- Intro Header -->
       {{-- @yield('header') --}}
    @yield('header')
-
+   
+    @if (Session::has('successMessage'))
+        <div class="alert alert-success">{{{ Session::get('successMessage') }}}</div>
+    @endif
+    @if (Session::has('errorMessage'))
+        <div class="alert alert-danger">{{{ Session::get('errorMessage') }}}</div>
+    @endif
     <!-- About Section -->
     <section id="about" class="container content-section text-center">
         <div class="row">
@@ -65,6 +71,10 @@
   @include('partials.footer')
    
     {{-- @yield('bottom-script') --}}
+      <script>
+            $('.alert')fadeOut(4000)
+    </script>
+
 </body> --}}
 
 </html>
