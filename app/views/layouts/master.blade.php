@@ -38,6 +38,7 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                @yield('about')
+               @yield('resume')
                @yield('body')
                @yield('content')
             </div>
@@ -71,10 +72,11 @@
   @include('partials.footer')
    
     {{-- @yield('bottom-script') --}}
+    <script src="js/freelancer.js"></script>
       <script>
             $('.alert')fadeOut(4000)
     </script>
 
-</body> --}}
+</body> 
 
 </html>

@@ -5,7 +5,7 @@
 @stop
 
 @section('content')
-  This is a summary of some of my work I have completed while attending Code Up
+  
 @stop
 
 @section('header')
@@ -23,9 +23,19 @@
                 </div>
             </div>
         </div>
+
     </header>
 @stop
 
 @section('about')
- <h2>My work</h2>
+ <h2>My work</h2> 
+        <div class="row">
+            <div class="column"><a href="#"><img src="" height="42" width="42">Simple</a></div>
+            <div class="column"><a href="#">Content2</a></div>
+        </div><!-- /.row -->
+        <div class="row">
+            <div class="column"><a href="#"><img src="img/mole_cartoon.png" height="42" width="42">Whack-A-Mole<a/></div>
+            <div class="column"><a href="#"><a/></div>
+            <div class="column">Content</div>
+        </div><!-- /.row -->
 @stop

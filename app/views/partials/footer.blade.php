@@ -1,7 +1,7 @@
 
  <footer>
         <div class="container text-center">
-            <p>Copyright &copy; Noe Nevarez</p>
+            <p>Copyright &copy; Noe Nevarez <?php echo date("Y")?></p>
         </div>
     </footer>
 

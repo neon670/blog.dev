@@ -121,6 +121,8 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
+		'Zizaco\Confide\ServiceProvider',
+		'Bbatsche\Entrust\EntrustServiceProvider',
 		
 
 	),
@@ -190,6 +192,8 @@ return array(
 		'Validator'         => 'Illuminate\Support\Facades\Validator',
 		'View'              => 'Illuminate\Support\Facades\View',
 		'Debugbar'		    => 'Barryvdh\Debugbar\Facade',
+		'Confide'    		=> 'Zizaco\Confide\Facade',
+		'Entrust'    		=> 'Bbatsche\Entrust\EntrustFacade',
 
 	),
 

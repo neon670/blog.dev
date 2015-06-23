@@ -36,7 +36,7 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>About Noe Nevarez</h2>
-                <p>I had been in the banking industry for some time now, working with loans, credit, checking/savings, customer service.</p>
+                <p>I had been in the banking industry for the past 8 yrs, working with loans, credit, checking/savings, customer service.</p>
                 <p>I was looking for a way to change my career path and was very interested in learning programing. Then I heard about Code Up and decided to take a leap of faith and quit my job and fully immerse myself in the programming world.</p>
                 <p>The bootcamp consisted of HTML, CSS, JavaScript, JQuery, MySql, PHP, Laravel.</p>
             </div>

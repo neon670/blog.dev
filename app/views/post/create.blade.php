@@ -5,18 +5,14 @@
 {{-- @stop --}}
 
 @section('content')
-	{{-- <form method= "POST" action="{{{ action('PostsController@store') }}}">
-		<label for="title">Blog title</label>
-		<input type="text" name="title">
-		<button type="submit" value="btn btn-default">Submit</button>
-	</form> --}}
+	
 		<h1>Create a Post</h1>
-			{{-- @if($errors->all()) --}}
-				{{-- @foreach($errors->all() as $error) --}}
-					{{-- {{ $error }} --}}
-				{{-- @endforeach --}}
-			{{-- @endif --}}
-		{{-- {{ $errors->first('title', '<span class="help-block">:message</span>') }} --}}
+			@if($errors->all())
+				@foreach($errors->all() as $error)
+					{{ $error }}
+				@endforeach
+			@endif
+		{{ $errors->first('title', '<span class="help-block">:message</span>') }}
 		<section class="container-fluid" id="section2">
 
 	  	<div class="container">

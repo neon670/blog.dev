@@ -1,5 +1,5 @@
 @extends('layouts.master')
 
 @section('content')
-<h1>this is an error</h1>
+<h1>Uh oh, looks like this page does not exist</h1>
 @stop 

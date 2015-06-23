@@ -1,6 +1,7 @@
 <?php
 
 use Carbon\Carbon;
+use \Esensi\Model\Model;
 
 Class BaseModel extends Eloquent{
 
