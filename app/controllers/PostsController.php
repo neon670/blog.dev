@@ -106,7 +106,18 @@ class PostsController extends \BaseController {
 	public function edit($id)
 	{
 
-		return View::make("edit");
+		try{
+			$post = Post::findOrFail($id);
+			$data = array (
+				'post'=>$post
+				);
+			return View::make('posts.edit')->with($data);
+		} catch (Exception $e) {
+			$data = array(
+				'error' => $e->getMessage()
+				);
+			return View::make('errors.exceptions')->with($data);
+		}
 	}
 
 
@@ -118,7 +129,20 @@ class PostsController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		return "Update post with $id";
+		$validator = Validator::make(Input::all(), Post::$rules);
+		if($validator->fails()){
+			// return ' woh oh';
+			Session::flash('errorMessage','Update failed. See error message.');
+			return Redirect::back()->withInput()->withErrors($validator);
+		} else {
+		$post = Post::find($id);
+		$post->title = Input::get('title');
+		$post->body = Input::get('body');
+		$post->slug = Input::get('title');
+		$post->save();
+		Session::flash('successMessage','Update successful.');
+		return Redirect::to('/posts');
+		}
 	}
 
 
@@ -130,7 +154,10 @@ class PostsController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		return "deleted post $id";
+		$post = Post::findOrFail($id);
+		$post->delete();
+		Session::flash('successMessage','Post successfully deleted.');
+		return Redirect::action('PostsController@index');
 	}
 
 

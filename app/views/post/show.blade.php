@@ -8,4 +8,7 @@
 <p>Written by: {{{ $post->user->username }}}</p>
 <{{{ $post->body }}}</p>
 <h4><a href="{{{ action('PostsController@index') }}}">Back to Blog Page</h4>
+ {{ Form::open(array('method'=>'delete', 'action'=>['PostsController@destroy', $post->id]))}}
+        <button type='submit' class='btn btn-danget btn-sm'>Delete Post</button>
+{{Form::close()}}
 @stop
