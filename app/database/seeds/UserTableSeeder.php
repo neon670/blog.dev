@@ -12,19 +12,19 @@ class UserTableSeeder extends Seeder{
 	{
 	
 
-		$faker = Faker::create();
+		// $faker = Faker::create();
 
-		for($i = 1; $i <= 50; $i++ )
-		{
+		// for($i = 1; $i <= 50; $i++ )
+		// {
 
-			$user = new User();
-				$user->username = $faker->unique()->userName;
-				$user->email=  $faker->unique()->email;
-				$user->password = $faker->password;
-				$user->save();
+		// 	$user = new User();
+		// 		$user->username = $faker->unique()->userName;
+		// 		$user->email=  $faker->unique()->email;
+		// 		$user->password = $faker->password;
+		// 		$user->save();
 
 			
-		}
+		// }
 
 		User::create([
 			'username' => $_ENV['USER_NAME'],

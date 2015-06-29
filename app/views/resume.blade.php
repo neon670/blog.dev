@@ -25,8 +25,8 @@
     </header>
 @stop
 @section('resume')
-<h4>NOE NEVAREZ
-San Antonio, TX 78230 closner_nevarez@hotmail.com Ph: 210-831-0988</h4>
+<h4>NOE NEVAREZ<br>
+San Antonio, TX 78230<br>closner_nevarez@hotmail.com<br> Ph: 210-831-0988</h4>
 <p>OBJECTIVE: Hardworking professional with a history of exceeding expectations looking to make an impact on the front end industry and delivering quantifiable results. Adept at effective multi-tasking and achieving outstanding results in high-pressure environments.</p><br>
 <p>WEB DEV PROJECTS:<br>
 Cart Blanche: Lavavel based project where I designed the admin page, rendering all data from our database using controllers and routes.<br>
