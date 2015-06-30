@@ -28,9 +28,9 @@
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
-                     <li>
+                   {{--   <li>
                         <a class="page-scroll" href="{{{ action('PostsController@index')     }}}">Blog Post</a>
-                    </li>
+                    </li> --}}
                     @if(Auth::check())
                     <li>Hello, {{{ Auth::user()->username }}}</li>
                     <li>
