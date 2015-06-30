@@ -52,7 +52,7 @@
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Contact Me</h2>
                 <p>Feel free to email me to provide some feedback or to just say hello!</p>
-                <p><a href="mailto:closner_nevarez@hotmail.com">closner_nevarez@hotmail.com</a>
+                <p><a href="mailto:closner_nevarez@hotmail.com">closner_nevarez@hotmail.com</a><br><a href="tel:1-210-831-0988">210-831-0988</a>
                 </p>
                 <ul class="list-inline banner-social-buttons">
                     <li>
