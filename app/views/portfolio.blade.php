@@ -30,12 +30,12 @@
 @section('about')
  <h2>My work</h2> 
         <div class="row">
-            <div class="column"><a href="#"><img src="" height="42" width="42">Simple</a></div>
-            <div class="column"><a href="#">Content2</a></div>
+            <div class="column"><a href="http://conceptsconstruction.com" target="blank"><img src="" height="42" width="42">Concept Construction</a></div>
+            <div class="column"><a href="http://www.sunsafefilm.com/" target="blank">Sunsafe Film</a></div>
         </div><!-- /.row -->
         <div class="row">
-            <div class="column"><a href="#"><img src="img/mole_cartoon.png" height="42" width="42">Whack-A-Mole<a/></div>
-            <div class="column"><a href="#"><a/></div>
-            <div class="column">Content</div>
+            <div class="column"><a href="http://westsidedoginitiative.org/index.html" target="blank"><img src="img/mole_cartoon.png" height="42" width="42">Westside Dog Initative<a/></div>
+            <div class="column"><a href="http://cartblanche.website/" target="blank">CartBlanche<a/></div>
+            <div class="column"></div>
         </div><!-- /.row -->
 @stop
