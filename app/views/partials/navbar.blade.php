@@ -28,10 +28,10 @@
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
-                   {{--   <li>
+                     <li>
                         <a class="page-scroll" href="{{{ action('PostsController@index')     }}}">Blog Post</a>
-                    </li> --}}
-                  {{--   @if(Auth::check())
+                    </li>
+                    @if(Auth::check())
                     <li>Hello, {{{ Auth::user()->username }}}</li>
                     <li>
                          <a class="page-scroll" href="{{{ action('LoginController@logout')    }}}">Logout</a>
@@ -40,7 +40,7 @@
                     <li>
                         <a class="page-scroll" href="{{{ action('LoginController@login')    }}}">Login</a>
                     </li>
-                    @endif --}}
+                    @endif
                 </ul>
             </div>
                 <form id="searchThis" action="/search" style="display: inline;" method="get"><input type="text" id="searchBox" /> <input id="searchButton" value="Go" type="submit" /></form>

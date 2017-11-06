@@ -12,7 +12,7 @@ class PostTableSeeder extends Seeder{
 			
 			$faker = Faker::create();
 
-			for( $i = 1; $i <= 100; $i++){
+			for( $i = 1; $i <= 10; $i++){
 				$user = User::all()->random();
 
 			$post = new Post();
@@ -24,13 +24,13 @@ class PostTableSeeder extends Seeder{
 
 			
 			
-			// $post 			= new Post();
-			// $post->title 	= 'this is title' . $i;
-			// $post->body 	= 'body body body body';
-			// $post->slug 	= 'post' . $i;
-			// $post->user_id	= 1;
-			// // $user1->password = $_ENV['USER_PASS'];
-			// $post->save();
+			$post 			= new Post();
+			$post->title 	= 'this is title' . $i;
+			$post->body 	= 'body body body body';
+			$post->slug 	= 'post' . $i;
+			$post->user_id	= 1;
+			// $user1->password = $_ENV['USER_PASS'];
+			$post->save();
 		}
 	}
 }
